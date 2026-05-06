@@ -1,50 +1,136 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Duy Trúc - Thu Trinh</title>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://kenh14cdn.com/203336854389633024/2021/3/7/9-1615066636363528042430.png"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duy Trúc &amp; Thu Trinh · 10/10/2026</title>
+  <meta name="description" content="Thiệp cưới Duy Trúc & Thu Trinh - 10/10/2026">
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://kenh14cdn.com/203336854389633024/2021/3/7/9-1615066636363528042430.png" />
 
-    <!-- Vue 3 CDN -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="css/css1.css" rel="stylesheet" />
-  </head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-  <body>
-    <div id="app" class="mobile-frame">
-      <header-component></header-component>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
 
-      <slide-component></slide-component>
-      </div>
+  <!-- Vue 3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-       
-    <script src="components/header.js"></script>
-    <script src="components/slide.js"></script>
-   <script>
-      const { createApp } = Vue;
+  <!-- Main CSS -->
+  <link href="css/css1.css" rel="stylesheet" />
+</head>
 
-      createApp({
-         components:{
-          'header-component': HeaderComponent,
-          'slide-component': SlideComponent
+<body>
+  <div id="app" class="app-wrapper">
+
+    <!-- Fixed Header -->
+    <header-component></header-component>
+
+    <!-- 1. Hero Slideshow -->
+    <slide-component></slide-component>
+
+    <!-- 2. Chúng Mình -->
+    <about-component></about-component>
+
+    <!-- 3. Cô Dâu & Chú Rể -->
+    <couple-component></couple-component>
+
+    <!-- 4. Album Ảnh Cưới -->
+    <gallery-component></gallery-component>
+
+    <!-- 5. Sự Kiện Cưới -->
+    <events-component></events-component>
+
+    <!-- 6. Đếm Ngược -->
+    <countdown-component></countdown-component>
+
+    <!-- 7. Xác Nhận Tham Dự -->
+    <rsvp-component></rsvp-component>
+
+    <!-- 8. Mừng Cưới -->
+    <gift-component></gift-component>
+
+    <!-- 9. Thank You / Footer -->
+    <footer-section-component></footer-section-component>
+
+    <!-- Music Player (nổi) -->
+    <div class="music-float">
+      <button
+        class="music-float-btn"
+        :class="{ playing: musicPlaying }"
+        @click="toggleMusic"
+        :title="musicPlaying ? 'Tắt nhạc' : 'Bật nhạc'"
+      >
+        <i :class="musicPlaying ? 'fas fa-pause' : 'fas fa-music'"></i>
+      </button>
+    </div>
+
+    <!-- Nhạc nền: đặt file vào music/background.mp3 -->
+    <audio ref="bgMusic" loop>
+      <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+  <!-- Components -->
+  <script src="components/header.js"></script>
+  <script src="components/slide.js"></script>
+  <script src="components/about.js"></script>
+  <script src="components/couple.js"></script>
+  <script src="components/gallery.js"></script>
+  <script src="components/events.js"></script>
+  <script src="components/countdown.js"></script>
+  <script src="components/rsvp.js"></script>
+  <script src="components/gift.js"></script>
+  <script src="components/footer-section.js"></script>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      components: {
+        'header-component':       HeaderComponent,
+        'slide-component':        SlideComponent,
+        'about-component':        AboutComponent,
+        'couple-component':       CoupleComponent,
+        'gallery-component':      GalleryComponent,
+        'events-component':       EventsComponent,
+        'countdown-component':    CountdownComponent,
+        'rsvp-component':         RsvpComponent,
+        'gift-component':         GiftComponent,
+        'footer-section-component': FooterSectionComponent
+      },
+
+      data() {
+        return { musicPlaying: false }
+      },
+
+      methods: {
+        toggleMusic() {
+          const audio = this.$refs.bgMusic
+          if (this.musicPlaying) {
+            audio.pause()
+          } else {
+            audio.play().catch(() => {})
+          }
+          this.musicPlaying = !this.musicPlaying
         }
+      },
 
-      }).mount("#app"); 
-    </script>
+      mounted() {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
+        }, { threshold: 0.1 })
 
-  </body>
+        document.querySelectorAll('.fade-up').forEach(el => io.observe(el))
+      }
+
+    }).mount('#app')
+  </script>
+
+</body>
 </html>
