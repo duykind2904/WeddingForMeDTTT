@@ -19,7 +19,7 @@ const HeaderComponent = {
   template: `
     <header :class="['site-header', { scrolled }]">
       <div class="logo">
-        <img :src="scrolled ? 'image/logo_black.png' : 'image/logo_wihte_1.png'" alt="Logo">
+        <img :src="scrolled ? 'image/logo.png' : 'image/logo_white.png'" alt="Logo">
       </div>
       <button class="nav-toggle" @click="toggleMenu" aria-label="Menu">
         <i class="fas fa-bars"></i>

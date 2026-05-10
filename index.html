@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Duy Trúc &amp; Thu Trinh · 10/10/2026</title>
   <meta name="description" content="Thiệp cưới Duy Trúc & Thu Trinh - 10/10/2026">
-  <link rel="shortcut icon" type="image/x-icon"
-    href="https://kenh14cdn.com/203336854389633024/2021/3/7/9-1615066636363528042430.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="/image/logo.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
@@ -59,12 +60,8 @@
 
     <!-- Music Player (nổi) -->
     <div class="music-float">
-      <button
-        class="music-float-btn"
-        :class="{ playing: musicPlaying }"
-        @click="toggleMusic"
-        :title="musicPlaying ? 'Tắt nhạc' : 'Bật nhạc'"
-      >
+      <button class="music-float-btn" :class="{ playing: musicPlaying }" @click="toggleMusic"
+        :title="musicPlaying ? 'Tắt nhạc' : 'Bật nhạc'">
         <i :class="musicPlaying ? 'fas fa-pause' : 'fas fa-music'"></i>
       </button>
     </div>
@@ -93,15 +90,15 @@
 
     createApp({
       components: {
-        'header-component':       HeaderComponent,
-        'slide-component':        SlideComponent,
-        'about-component':        AboutComponent,
-        'couple-component':       CoupleComponent,
-        'gallery-component':      GalleryComponent,
-        'events-component':       EventsComponent,
-        'countdown-component':    CountdownComponent,
-        'rsvp-component':         RsvpComponent,
-        'gift-component':         GiftComponent,
+        'header-component': HeaderComponent,
+        'slide-component': SlideComponent,
+        'about-component': AboutComponent,
+        'couple-component': CoupleComponent,
+        'gallery-component': GalleryComponent,
+        'events-component': EventsComponent,
+        'countdown-component': CountdownComponent,
+        'rsvp-component': RsvpComponent,
+        'gift-component': GiftComponent,
         'footer-section-component': FooterSectionComponent
       },
 
@@ -115,7 +112,7 @@
           if (this.musicPlaying) {
             audio.pause()
           } else {
-            audio.play().catch(() => {})
+            audio.play().catch(() => { })
           }
           this.musicPlaying = !this.musicPlaying
         }
@@ -133,4 +130,5 @@
   </script>
 
 </body>
+
 </html>

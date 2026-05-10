@@ -1,30 +1,32 @@
 const CoupleComponent = {
   template: `
     <section class="couple-section fade-up">
-      <div class="section-title" style="padding:0 28px 30px">
+      <div class="section-title" >
         <span class="tag">The Couple</span>
-        <span class="script-title">Cô Dâu &amp; Chú Rể</span>
+        <!-- <span class="script-title">Cô Dâu &amp; Chú Rể</span> -->
         <div class="divider"><i class="fas fa-heart"></i></div>
       </div>
 
-      <div class="couple-cards">
+      <div class="couple-duo">
         <!-- Chú Rể -->
-        <div class="couple-card">
-          <img src="image/slide1.webp" alt="Duy Trúc — Chú Rể">
-          <div class="couple-card-overlay">
-            <span class="couple-role">Chú Rể</span>
-            <div class="couple-name-card">Duy Trúc</div>
-            <p class="couple-desc">Con trai của gia đình<br>Nguyễn Văn A &amp; Trần Thị B</p>
+        <div class="couple-person groom">
+          <div class="cp-name-strip">
+            <span>Duy Trúc</span>
+          </div>
+          <div class="cp-card">
+            <img src="image/_HIO9582.jpg" alt="Duy Trúc">
+            <span class="cp-role">Chú rể</span>
           </div>
         </div>
 
         <!-- Cô Dâu -->
-        <div class="couple-card">
-          <img src="image/slide3.webp" alt="Thu Trinh — Cô Dâu">
-          <div class="couple-card-overlay">
-            <span class="couple-role">Cô Dâu</span>
-            <div class="couple-name-card">Thu Trinh</div>
-            <p class="couple-desc">Con gái của gia đình<br>Lê Văn C &amp; Phạm Thị D</p>
+        <div class="couple-person bride">
+          <div class="cp-card">
+            <img src="image/_HIO9989.jpg" alt="Thu Trinh">
+            <span class="cp-role">Cô dâu</span>
+          </div>
+          <div class="cp-name-strip">
+            <span>Thu Trinh</span>
           </div>
         </div>
       </div>

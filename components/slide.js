@@ -2,7 +2,7 @@ const SlideComponent = {
   data() {
     return {
       current: 0,
-      images: ['image/slide1.webp', 'image/slide2.webp', 'image/slide3.webp']
+      images: ['image/_HIO9269.jpg', 'image/_HIO9622.jpg', 'image/_HIO9403.jpg']
     }
   },
   mounted() {
@@ -28,7 +28,7 @@ const SlideComponent = {
           <span class="hero-amp">&amp;</span>
           Thu Trinh
         </div>
-        <div class="hero-date-tag">10 · 10 · 2026</div>
+        <div class="hero-date-tag">14 · 06 · 2026</div>
       </div>
 
       <div class="hero-scroll">

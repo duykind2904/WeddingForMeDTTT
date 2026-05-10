@@ -6,31 +6,31 @@ const EventsComponent = {
           icon: 'fas fa-house-user',
           title: 'Lễ Gia Tiên Nhà Trai',
           rows: [
-            { icon: 'fas fa-calendar-day', text: 'Thứ Bảy, ngày 10 tháng 10 năm 2026' },
-            { icon: 'fas fa-clock',        text: '07:00 Sáng' },
-            { icon: 'fas fa-map-marker-alt', text: '123 Đường ABC, Phường 1, Quận 1, TP. HCM' }
+            { icon: 'fas fa-calendar-day', text: 'Chủ nhật, ngày 14 tháng 06 năm 2026' },
+            { icon: 'fas fa-clock', text: '09:00' },
+            { icon: 'fas fa-map-marker-alt', text: 'Đại Bình, Nông Sơn, TP. Đà Nẵng' }
           ],
-          map: 'https://maps.google.com/?q=Quan+1+Ho+Chi+Minh'
+          map: 'https://maps.app.goo.gl/xHndLnm2QHRKJkXu5'
         },
         {
           icon: 'fas fa-home',
           title: 'Lễ Gia Tiên Nhà Gái',
           rows: [
-            { icon: 'fas fa-calendar-day', text: 'Thứ Bảy, ngày 10 tháng 10 năm 2026' },
-            { icon: 'fas fa-clock',        text: '09:00 Sáng' },
-            { icon: 'fas fa-map-marker-alt', text: '456 Đường XYZ, Phường 5, Quận 3, TP. HCM' }
+            { icon: 'fas fa-calendar-day', text: 'Chủ nhật, ngày 14 tháng 06 năm 2026' },
+            { icon: 'fas fa-clock', text: '07:00' },
+            { icon: 'fas fa-map-marker-alt', text: 'Đại Bình, Nông Sơn, TP. Đà Nẵng' }
           ],
-          map: 'https://maps.google.com/?q=Quan+3+Ho+Chi+Minh'
+          map: 'https://maps.app.goo.gl/Aq4GPe669bTVw1VKA'
         },
         {
           icon: 'fas fa-rings-wedding',
           title: 'Tiệc Cưới',
           rows: [
-            { icon: 'fas fa-calendar-day', text: 'Thứ Bảy, ngày 10 tháng 10 năm 2026' },
-            { icon: 'fas fa-clock',        text: '11:00 Sáng' },
-            { icon: 'fas fa-map-marker-alt', text: 'Diamond Palace Wedding Center\n123 Nguyễn Văn Linh, Quận 7, TP. HCM' }
+            { icon: 'fas fa-calendar-day', text: 'Chủ nhật, ngày 14 tháng 06 năm 2026' },
+            { icon: 'fas fa-clock', text: '11:00' },
+            { icon: 'fas fa-map-marker-alt', text: 'Đại Bình, Nông Sơn, TP. Đà Nẵng' }
           ],
-          map: 'https://maps.google.com/?q=Nguyen+Van+Linh+Quan+7+Ho+Chi+Minh'
+          map: 'https://maps.app.goo.gl/eeGzAwVXCuT1LA3M6'
         }
       ]
     }

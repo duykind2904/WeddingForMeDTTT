@@ -2,15 +2,16 @@ const GalleryComponent = {
   data() {
     return {
       photos: [
-        { src: 'image/slide1.webp', tall: true },
-        { src: 'image/slide2.webp', tall: false },
-        { src: 'image/slide3.webp', tall: false },
-        { src: 'image/slide3.webp', tall: false },
-        { src: 'image/slide1.webp', tall: false },
-        { src: 'image/slide2.webp', tall: true },
-        { src: 'image/slide2.webp', tall: false },
-        { src: 'image/slide3.webp', tall: false },
-        { src: 'image/slide1.webp', tall: false }
+        { src: 'image/_HIO9403.JPG', tall: true },
+        { src: 'image/_HIO9628.JPG', tall: false },
+        { src: 'image/_HIO9485.jpg', tall: false },
+        { src: 'image/_HIO9737.JPG', tall: false },
+        { src: 'image/_HIO9753.jpg', tall: false },
+        { src: 'image/_HIO9867.JPG', tall: true },
+        { src: 'image/_HIO0082.jpg', tall: false },
+        { src: 'image/_HIO0004.JPG', tall: false },
+        { src: 'image/_HIO9981.JPG', tall: false },
+        { src: 'image/_HIO9986.jpg', tall: false }
       ]
     }
   },
