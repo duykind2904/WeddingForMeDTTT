@@ -2,7 +2,7 @@ const FooterSectionComponent = {
   template: `
     <footer class="site-footer">
       <div class="footer-photo">
-        <img src="image/_HIO9269.jpg" alt="Thank You">
+        <img src="image/_HIO9269.webp" alt="Thank You">
         <div class="footer-photo-overlay">
           <div class="footer-thankyou">Thank You</div>
           <div class="footer-couple-names">Duy Trúc &amp; Thu Trinh</div>

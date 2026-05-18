@@ -2,7 +2,7 @@ const SlideComponent = {
   data() {
     return {
       current: 0,
-      images: ['image/_HIO9269.jpg', 'image/_HIO9622.jpg', 'image/_HIO9403.jpg']
+      images: ['image/_HIO9269.webp', 'image/_HIO9622.webp', 'image/_HIO9403.webp']
     }
   },
   mounted() {

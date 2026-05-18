@@ -462,6 +462,303 @@ h4 {
 }
 
 /* ==============================
+   PARENTS INVITE — THIỆP GIA ĐÌNH
+============================== */
+.pi-section {
+  background: var(--white);
+  padding: 56px 32px 52px;
+  text-align: center;
+}
+
+.pi-monogram {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 72px;
+  margin-bottom: 32px;
+}
+
+.pi-mono-back,
+.pi-mono-front {
+  position: absolute;
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.2rem;
+  line-height: 1;
+  color: var(--primary);
+  left: 50%;
+  top: 50%;
+}
+
+.pi-mono-back {
+  transform: translate(-62%, -50%) rotate(-12deg);
+  opacity: 0.35;
+}
+
+.pi-mono-front {
+  transform: translate(-38%, -50%) rotate(12deg);
+  opacity: 0.9;
+}
+
+.pi-parents {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 28px;
+}
+
+.pi-parent {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.pi-divider-v {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+.pi-parent-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+.pi-parent-names {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.55;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.pi-parent-addr {
+  font-size: 0.65rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.pi-announce {
+  margin-bottom: 22px;
+}
+
+.pi-announce p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.pi-person {
+  margin-bottom: 6px;
+}
+
+.pi-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.4rem;
+  color: var(--primary);
+  line-height: 1.15;
+}
+
+.pi-role-label {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2px;
+  font-family: 'Lato', sans-serif;
+}
+
+.pi-rings {
+  margin: 18px 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  opacity: 0.75;
+}
+
+.pi-rings .flipped {
+  transform: scaleX(-1);
+}
+
+.pi-event {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.pi-event-venue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem;
+  color: var(--text);
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.pi-event-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem;
+  color: var(--text);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.pi-event-date {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.pi-event-lunar {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+/* ==============================
+   INVITATION CARD — THIỆP MỜI
+============================== */
+.invcard-section {
+  background: var(--white);
+  padding: 48px 32px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.invcard-floral {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  color: var(--border);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.invcard-script-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.invcard-couple-names {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.invcard-couple-names i {
+  color: var(--primary);
+  font-size: 0.75rem;
+}
+
+.invcard-gap {
+  height: 28px;
+}
+
+.invcard-heading {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  color: var(--text);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.invcard-dots {
+  font-size: 0.72rem;
+  color: var(--border);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.invcard-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+.invcard-venue-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.1rem;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.invcard-venue-addr {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.invcard-time-bold {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.invcard-time-lunar {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.invcard-closing {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+.invcard-schedule {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.72rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.invcard-kinhmoi {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ==============================
    COUPLE — CÔ DÂU / CHÚ RỂ
 ============================== */
 .couple-section {

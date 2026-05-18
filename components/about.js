@@ -2,7 +2,7 @@ const AboutComponent = {
   template: `
     <section id="about" class="about-section fade-up">
       <div class="about-photo">
-        <img src="image/_HIO9628.jpg" alt="Duy Trúc & Thu Trinh">
+        <img src="image/_HIO9628.webp" alt="Duy Trúc & Thu Trinh">
       </div>
       <div class="divider"><i class="fas fa-heart"></i></div>
       <h2 class="about-heading">Chúng Mình</h2>
