@@ -2,16 +2,16 @@ const GalleryComponent = {
   data() {
     return {
       photos: [
-        { src: 'image/_HIO9403.webp', tall: true },
-        { src: 'image/_HIO9628.webp', tall: false },
-        { src: 'image/_HIO9485.webp', tall: false },
-        { src: 'image/_HIO9737.webp', tall: false },
-        { src: 'image/_HIO9753.webp', tall: false },
-        { src: 'image/_HIO9867.webp', tall: true },
-        { src: 'image/_HIO0082.webp', tall: false },
-        { src: 'image/_HIO0004.webp', tall: false },
-        { src: 'image/_HIO9981.webp', tall: false },
-        { src: 'image/_HIO9986.webp', tall: false }
+        { src: 'image/HIO9403.webp', tall: true },
+        { src: 'image/HIO9628.webp', tall: false },
+        { src: 'image/HIO9485.webp', tall: false },
+        { src: 'image/HIO9737.webp', tall: false },
+        { src: 'image/HIO9753.webp', tall: false },
+        { src: 'image/HIO9867.webp', tall: true },
+        { src: 'image/HIO0082.webp', tall: false },
+        { src: 'image/HIO0004.webp', tall: false },
+        { src: 'image/HIO9981.webp', tall: false },
+        { src: 'image/HIO9986.webp', tall: false }
       ]
     }
   },

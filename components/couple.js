@@ -14,7 +14,7 @@ const CoupleComponent = {
             <span>Duy Trúc</span>
           </div>
           <div class="cp-card">
-            <img src="image/_HIO9582.webp" alt="Duy Trúc">
+            <img src="image/HIO9582.webp" alt="Duy Trúc">
             <span class="cp-role">Chú rể</span>
           </div>
         </div>
@@ -22,7 +22,7 @@ const CoupleComponent = {
         <!-- Cô Dâu -->
         <div class="couple-person bride">
           <div class="cp-card">
-            <img src="image/_HIO9989.webp" alt="Thu Trinh">
+            <img src="image/HIO9989.webp" alt="Thu Trinh">
             <span class="cp-role">Cô dâu</span>
           </div>
           <div class="cp-name-strip">
