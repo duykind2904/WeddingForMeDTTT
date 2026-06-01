@@ -12,7 +12,7 @@ const RsvpComponent = {
     }
   },
   template: `
-    <section id="rsvp" class="rsvp-section fade-up">
+    <section id="rsvp" class="rsvp-section fade-right">
       <div class="section-title">
         <span class="tag">RSVP</span>
         <span class="script-title">Xác Nhận Tham Dự</span>

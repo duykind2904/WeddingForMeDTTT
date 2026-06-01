@@ -1,6 +1,6 @@
 const GreetingComponent = {
   template: `
-    <section id="greeting" class="greeting-section fade-up">
+    <section id="greeting" class="greeting-section fade-in">
       <p class="greeting-tag">Happy Wedding</p>
       <div class="divider"><i class="fas fa-heart"></i></div>
       <div class="greeting-names">Duy Trúc</div>

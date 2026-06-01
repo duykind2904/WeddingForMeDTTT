@@ -1,6 +1,6 @@
 const ParentsInviteComponent = {
   template: `
-    <section class="pi-section fade-up">
+    <section class="pi-section fade-in">
 
       <!-- Monogram -->
       <div class="pi-monogram">
@@ -10,13 +10,13 @@ const ParentsInviteComponent = {
 
       <!-- Hai bên gia đình -->
       <div class="pi-parents">
-        <div class="pi-parent">
+        <div class="pi-parent pi-parent--left">
           <p class="pi-parent-label">Ông/Bà</p>
           <p class="pi-parent-names">NGUYỄN DUY MINH<br>NGÔ THỊ HOA</p>
           <p class="pi-parent-addr">Thôn Đại Bình, X. Nông Sơn<br>TP. Đà Nẵng</p>
         </div>
         <div class="pi-divider-v"></div>
-        <div class="pi-parent">
+        <div class="pi-parent pi-parent--right">
           <p class="pi-parent-label">Ông/Bà</p>
           <p class="pi-parent-names">NGUYỄN VĂN DŨNG<br>NGUYỄN THỊ TIẾN</p>
           <p class="pi-parent-addr">Thôn Đại Bình, X. Nông Sơn<br>TP. Đà Nẵng</p>
@@ -30,19 +30,19 @@ const ParentsInviteComponent = {
       </div>
 
       <!-- Chú rể -->
-      <div class="pi-person">
+      <div class="pi-person pi-person--1">
         <div class="pi-script">Nguyễn Duy Trúc</div>
         <div class="pi-role-label">Út Nam</div>
       </div>
 
       <!-- Nhẫn cưới -->
-      <div class="pi-rings">
+      <div class="pi-rings pi-rings--anim">
         <i class="fa-solid fa-ring"></i>
         <i class="fa-solid fa-ring flipped"></i>
       </div>
 
       <!-- Cô dâu -->
-      <div class="pi-person">
+      <div class="pi-person pi-person--2">
         <div class="pi-script">Nguyễn Thị Thu Trinh</div>
         <div class="pi-role-label">Thứ Nữ</div>
       </div>

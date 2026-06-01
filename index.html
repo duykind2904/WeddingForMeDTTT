@@ -28,6 +28,9 @@
 <body>
   <div id="app" class="app-wrapper">
 
+    <!-- Màn hình bìa -->
+    <cover-component></cover-component>
+
     <!-- Fixed Header -->
     <header-component></header-component>
 
@@ -46,23 +49,29 @@
     <!-- 5. Cô Dâu & Chú Rể -->
     <couple-component></couple-component>
 
-    <!-- 4. Album Ảnh Cưới -->
-    <gallery-component></gallery-component>
+    <!-- 6. Đếm Ngược -->
+    <countdown-component></countdown-component>
+
+    <!-- 7. Photo Quote -->
+    <photo-quote-component></photo-quote-component>
 
     <!-- 5. Sự Kiện Cưới -->
     <events-component></events-component>
 
-    <!-- 6. Đếm Ngược -->
-    <countdown-component></countdown-component>
+    <!-- 8. Album Ảnh Cưới -->
+    <gallery-component></gallery-component>
 
     <!-- 7. Xác Nhận Tham Dự -->
-    <rsvp-component></rsvp-component>
+    <!-- <rsvp-component></rsvp-component> -->
 
     <!-- 8. Mừng Cưới -->
-    <gift-component></gift-component>
+    <!-- <gift-component></gift-component> -->
 
     <!-- 9. Thank You / Footer -->
     <footer-section-component></footer-section-component>
+
+    <!-- Lời chúc popup -->
+    <wishes-component></wishes-component>
 
     <!-- Music Player (nổi) -->
     <div class="music-float">
@@ -74,23 +83,26 @@
 
     <!-- Nhạc nền: đặt file vào music/background.mp3 -->
     <audio ref="bgMusic" loop>
-      <source src="music/background.mp3" type="audio/mpeg">
+      <source src="music/nhac.mp3" type="audio/mpeg">
     </audio>
 
   </div>
 
   <!-- Components -->
+  <script src="components/cover.js"></script>
   <script src="components/header.js"></script>
   <script src="components/slide.js"></script>
   <script src="components/about.js"></script>
   <script src="components/parents-invite.js"></script>
   <script src="components/invitation-card.js"></script>
   <script src="components/couple.js"></script>
+  <script src="components/photo-quote.js"></script>
   <script src="components/gallery.js"></script>
   <script src="components/events.js"></script>
   <script src="components/countdown.js"></script>
   <script src="components/rsvp.js"></script>
   <script src="components/gift.js"></script>
+  <script src="components/wishes.js"></script>
   <script src="components/footer-section.js"></script>
 
   <script>
@@ -98,17 +110,20 @@
 
     createApp({
       components: {
+        'cover-component': CoverComponent,
         'header-component': HeaderComponent,
         'slide-component': SlideComponent,
         'about-component': AboutComponent,
         'parents-invite-component': ParentsInviteComponent,
         'invitation-card-component': InvitationCardComponent,
         'couple-component': CoupleComponent,
+        'photo-quote-component': PhotoQuoteComponent,
         'gallery-component': GalleryComponent,
         'events-component': EventsComponent,
         'countdown-component': CountdownComponent,
         'rsvp-component': RsvpComponent,
         'gift-component': GiftComponent,
+        'wishes-component': WishesComponent,
         'footer-section-component': FooterSectionComponent
       },
 
@@ -129,14 +144,71 @@
       },
 
       mounted() {
+        const startMusic = () => {
+          this.$refs.bgMusic.play()
+            .then(() => {
+              this.musicPlaying = true
+            })
+            .catch(() => { })
+
+          document.removeEventListener('click', startMusic)
+        }
+
+        document.addEventListener('click', startMusic)
+        // Scroll-triggered animations
         const io = new IntersectionObserver((entries) => {
           entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
-        }, { threshold: 0.1 })
+        }, { threshold: 0.1, rootMargin: '0px 0px -120px 0px' })
 
-        document.querySelectorAll('.fade-up').forEach(el => io.observe(el))
+        document.querySelectorAll('.fade-up, .fade-down, .fade-left, .fade-right, .fade-in, .zoom-in')
+          .forEach(el => io.observe(el))
+
       }
 
     }).mount('#app')
+  </script>
+
+  <!-- Tuyết rơi -->
+  <script>
+      (function () {
+        const canvas = document.createElement('canvas')
+        canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;'
+        document.body.appendChild(canvas)
+        const ctx = canvas.getContext('2d')
+
+        const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight }
+        resize()
+        window.addEventListener('resize', resize)
+
+        const N = 90
+        const flakes = Array.from({ length: N }, () => ({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          r: Math.random() * 2.5 + 0.8,
+          speed: Math.random() * 1.2 + 0.4,
+          opacity: Math.random() * 0.55 + 0.15,
+          angle: Math.random() * Math.PI * 2,
+          drift: Math.random() * 0.6 - 0.3
+        }))
+
+        const draw = () => {
+          ctx.clearRect(0, 0, canvas.width, canvas.height)
+          flakes.forEach(f => {
+            f.angle += 0.008
+            f.y += f.speed
+            f.x += Math.sin(f.angle) * f.drift
+            if (f.y > canvas.height + 10) { f.y = -10; f.x = Math.random() * canvas.width }
+            if (f.x > canvas.width + 10) f.x = -10
+            if (f.x < -10) f.x = canvas.width + 10
+            ctx.beginPath()
+            ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2)
+            ctx.fillStyle = `rgba(255,255,255,${f.opacity})`
+            ctx.fill()
+          })
+          requestAnimationFrame(draw)
+        }
+        draw()
+      })()
   </script>
 
 </body>

@@ -1,6 +1,6 @@
 const InvitationComponent = {
   template: `
-    <section id="invitation" class="invitation-section fade-up">
+    <section id="invitation" class="invitation-section fade-left">
       <div class="invitation-card">
         <span class="inv-tag">Wedding Invitation</span>
         <div class="inv-name">Duy Trúc</div>

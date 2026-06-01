@@ -1,6 +1,6 @@
 const VenueComponent = {
   template: `
-    <section id="venue" class="venue-section fade-up">
+    <section id="venue" class="venue-section fade-left">
       <div class="section-title">
         <span class="tag">Location</span>
         <span class="script-heading">Địa Điểm</span>

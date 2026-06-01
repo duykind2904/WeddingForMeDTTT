@@ -16,7 +16,7 @@ const GalleryComponent = {
     }
   },
   template: `
-    <section id="gallery" class="gallery-section fade-up">
+    <section id="gallery" class="gallery-section zoom-in">
       <div class="section-title">
         <span class="tag">Moments</span>
         <span class="script-title">Bộ Sưu Tập Ảnh Cưới</span>

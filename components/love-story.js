@@ -31,7 +31,7 @@ const LoveStoryComponent = {
     }
   },
   template: `
-    <section id="love-story" class="section fade-up">
+    <section id="love-story" class="section fade-right">
       <div class="section-title">
         <span class="tag">Our Journey</span>
         <span class="script-heading">Chuyện Tình Yêu</span>

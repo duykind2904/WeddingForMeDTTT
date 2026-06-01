@@ -21,20 +21,15 @@ const SlideComponent = {
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
-        <p class="hero-tag">Wedding Invitation</p>
-        <div class="hero-happy">Happy Wedding</div>
         <div class="hero-names">
-          Duy Trúc
+          <span class="hero-name-left">Duy Trúc</span>
           <span class="hero-amp">&amp;</span>
-          Thu Trinh
+          <span class="hero-name-right">Thu Trinh</span>
         </div>
         <div class="hero-date-tag">14 · 06 · 2026</div>
       </div>
 
-      <div class="hero-scroll">
-        <span>Cuộn xuống</span>
-        <i class="fas fa-chevron-down" style="margin-top:2px"></i>
-      </div>
+      
     </section>
   `
 }

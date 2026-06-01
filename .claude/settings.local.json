@@ -5,7 +5,10 @@
       "Bash(Get-ChildItem -Path \"e:\\\\abc\\\\WeddingForMeDTTT\" -Recurse -Force)",
       "Bash(Select-Object FullName, PSIsContainer)",
       "Bash(Sort-Object FullName)",
-      "Bash(ConvertTo-Json)"
+      "Bash(ConvertTo-Json)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }

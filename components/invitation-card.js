@@ -1,6 +1,16 @@
 const InvitationCardComponent = {
+  data() {
+    return {
+      guestName: ''
+    }
+  },
+  created() {
+    const params = new URLSearchParams(window.location.search)
+    const name = params.get('to') || params.get('name') || ''
+    this.guestName = decodeURIComponent(name).trim()
+  },
   template: `
-    <section class="invcard-section fade-up">
+    <section class="invcard-section fade-left">
 
       <!-- Hoa trang trí góc trên phải -->
       <div class="invcard-floral" aria-hidden="true">
@@ -50,6 +60,7 @@ const InvitationCardComponent = {
 
       <!-- Kính mời -->
       <p class="invcard-heading">TRÂN TRỌNG KÍNH MỜI:</p>
+      <p v-if="guestName" class="invcard-guest-name">{{ guestName }}</p>
       <p class="invcard-dots">............................................................</p>
       <p class="invcard-body">Đến dự buổi tiệc chung vui cùng<br>gia đình chúng tôi tại</p>
 

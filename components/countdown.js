@@ -18,7 +18,7 @@ const CountdownComponent = {
     pad(n) { return String(n).padStart(2, '0') }
   },
   template: `
-    <section class="countdown-section">
+    <section class="countdown-section zoom-in">
       <div class="countdown-date-big">14 &middot; 6 &middot; 2026</div>
       <div class="countdown-day-name">Chủ nhật &nbsp;·&nbsp; 11h00</div>
       <div class="countdown-grid">
