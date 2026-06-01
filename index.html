@@ -145,16 +145,29 @@
 
       mounted() {
         const startMusic = () => {
-          this.$refs.bgMusic.play()
+          const audio = this.$refs.bgMusic
+
+          audio.play()
             .then(() => {
               this.musicPlaying = true
+              removeEvents()
             })
-            .catch(() => { })
-
-          document.removeEventListener('click', startMusic)
+            .catch(err => console.log(err))
         }
 
-        document.addEventListener('click', startMusic)
+        const removeEvents = () => {
+          window.removeEventListener('click', startMusic)
+          window.removeEventListener('touchstart', startMusic)
+          window.removeEventListener('keydown', startMusic)
+          window.removeEventListener('wheel', startMusic)
+        }
+
+        window.addEventListener('click', startMusic)
+        window.addEventListener('touchstart', startMusic)
+        window.addEventListener('keydown', startMusic)
+        window.addEventListener('wheel', startMusic)
+
+
         // Scroll-triggered animations
         const io = new IntersectionObserver((entries) => {
           entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') })
