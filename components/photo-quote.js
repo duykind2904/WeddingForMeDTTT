@@ -15,11 +15,21 @@ const PhotoQuoteComponent = {
 
       <!-- Lưới ảnh 2×2 -->
       <div class="pq-grid">
-        <div class="pq-photo"><img src="image/HIO9403.webp" alt=""></div>
-        <div class="pq-photo"><img src="image/HIO9628.webp" alt=""></div>
-        <div class="pq-photo"><img src="image/HIO9737.webp" alt=""></div>
-        <div class="pq-photo"><img src="image/HIO9753.webp" alt=""></div>
+        <div class="pq-photo"><img src="image/z28.jpg" alt=""></div>
+        <div class="pq-photo"><img src="image/z10.jpg" alt=""></div>
       </div>
+
+      <div class="pq-caption">
+        <span class="pq-caption-line"></span>
+        <span class="pq-caption-text">Những khoảnh khắc yêu thương chớm nở </span>
+        <span class="pq-caption-line"></span>
+      </div>
+
+      <div class="pq-grid">
+        <div class="pq-photo"><img src="image/z23.jpg" alt=""></div>
+        <div class="pq-photo"><img src="image/z11.jpg" alt=""></div>
+      </div>
+
 
     </section>
   `

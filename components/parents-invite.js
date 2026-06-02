@@ -4,8 +4,7 @@ const ParentsInviteComponent = {
 
       <!-- Monogram -->
       <div class="pi-monogram">
-        <span class="pi-mono-back">T</span>
-        <span class="pi-mono-front">T</span>
+        <img src="image/logo.png" alt="">
       </div>
 
       <!-- Hai bên gia đình -->

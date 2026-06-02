@@ -1,28 +1,38 @@
 const GiftComponent = {
   data() {
     return {
+      showModal: false,
+      activeBank: null,
       copiedIndex: -1,
       banks: [
         {
-          label: 'ĐẾN CHÚ RỂ',
+          id: 0,
+          label: 'Chú Rể',
           owner: 'Nguyễn Duy Trúc',
-          bank: 'Vietcombank',
-          number: '1234567890',
-          branch: 'TP.HCM',
-          qr: ''
+          bank: 'ACB Ngân hàng Á Châu',
+          number: '11781177',
+          qr: 'image/qr.webp'
         },
         {
-          label: 'ĐẾN CÔ DÂU',
-          owner: 'Trần Thu Trinh',
-          bank: 'Techcombank',
+          id: 1,
+          label: 'Cô Dâu',
+          owner: 'Nguyễn Thị Thu Trinh',
+          bank: 'ViettinBank',
           number: '9876543210',
-          branch: 'TP.HCM',
-          qr: ''
+          qr: 'image/qr.webp'
         }
       ]
     }
   },
   methods: {
+    open(bank) {
+      this.activeBank = bank
+      this.showModal = true
+    },
+    close() {
+      this.showModal = false
+      this.copiedIndex = -1
+    },
     copy(number, i) {
       navigator.clipboard.writeText(number).catch(() => {
         const el = document.createElement('textarea')
@@ -38,52 +48,70 @@ const GiftComponent = {
   },
   template: `
     <section id="gift" class="gift-section fade-up">
-      <div class="section-title">
-        <span class="tag" style="color:var(--accent)">Gift</span>
-        <span class="script-title" style="color:#fff">Mừng Cưới</span>
-        <div class="divider"><i class="fas fa-gift" style="color:var(--accent)"></i></div>
+
+      <div class="gift-header">
+        <p class="gift-header-sub">Hộp quà yêu thương</p>
+        <h2 class="gift-header-title">Hãy nhấn vào hộp quà</h2>
+        <p class="gift-header-hint"><i class="fas fa-hand-pointer"></i></p>
       </div>
-      <p class="gift-intro">
-        Sự hiện diện của bạn là niềm hân hoan lớn nhất với chúng mình.
-        Nếu bạn muốn gửi thêm yêu thương, xin nhận qua thông tin dưới đây.
-      </p>
 
-      <div class="gift-cards">
-        <div v-for="(b, i) in banks" :key="i" class="gift-card">
-          <div class="gift-card-title">{{ b.label }}</div>
-
-          <div class="gift-qr">
-            <img v-if="b.qr" :src="b.qr" :alt="b.owner">
-            <div v-else class="gift-qr-placeholder">
-              <i class="fas fa-qrcode"></i>
-            </div>
+      <div class="gift-boxes">
+        <div class="gift-box-item" v-for="b in banks" :key="b.id" @click="open(b)">
+          <div class="gift-box-icon">
+            <i class="fas fa-gift"></i>
           </div>
-
-          <div class="gift-info">
-            <div class="gift-info-row">
-              <span class="gi-label">Ngân hàng:</span>
-              <span class="gi-val">{{ b.bank }}</span>
-            </div>
-            <div class="gift-info-row">
-              <span class="gi-label">Chủ TK:</span>
-              <span class="gi-val">{{ b.owner }}</span>
-            </div>
-            <div class="gift-info-row">
-              <span class="gi-label">Số TK:</span>
-              <span class="gi-val gi-accent">{{ b.number }}</span>
-            </div>
-            <div class="gift-info-row">
-              <span class="gi-label">Chi nhánh:</span>
-              <span class="gi-val">{{ b.branch }}</span>
-            </div>
-          </div>
-
-          <button class="gift-copy-btn" :class="{ copied: copiedIndex === i }" @click="copy(b.number, i)">
-            <i :class="copiedIndex === i ? 'fas fa-check' : 'fas fa-copy'"></i>
-            {{ copiedIndex === i ? 'Đã sao chép!' : 'Sao chép' }}
-          </button>
+          <div class="gift-box-label">{{ b.label }}</div>
         </div>
       </div>
+
+      <p class="gift-note">
+        Cảm ơn bạn đã đồng hành và chúc phúc cho hành trình yêu thương của chúng mình.<br>
+        Niềm vui hôm nay trọn vẹn hơn khi có bạn cùng sẻ chia! 🌷
+      </p>
+
+      <!-- Modal -->
+      <transition name="qr-fade">
+        <div v-if="showModal && activeBank" class="qr-modal-overlay" @click.self="close">
+          <div class="qr-modal">
+            <button class="qr-modal-close" @click="close"><i class="fas fa-times"></i></button>
+
+            <div class="qr-modal-label">{{ activeBank.label }}</div>
+            <div class="qr-modal-owner">{{ activeBank.owner }}</div>
+
+            <div class="qr-modal-img">
+              <img v-if="activeBank.qr" :src="activeBank.qr" :alt="activeBank.owner">
+              <div v-else class="qr-modal-placeholder">
+                <i class="fas fa-qrcode"></i>
+              </div>
+            </div>
+
+            <div class="qr-modal-info">
+              <div class="qr-info-row">
+                <span class="qr-info-label">Ngân hàng</span>
+                <span class="qr-info-val">{{ activeBank.bank }}</span>
+              </div>
+              <div class="qr-info-row">
+                <span class="qr-info-label">Số tài khoản</span>
+                <span class="qr-info-val qr-info-accent">{{ activeBank.number }}</span>
+              </div>
+              <div class="qr-info-row">
+                <span class="qr-info-label">Chi nhánh</span>
+                <span class="qr-info-val">{{ activeBank.branch }}</span>
+              </div>
+            </div>
+
+            <button
+              class="qr-copy-btn"
+              :class="{ copied: copiedIndex === activeBank.id }"
+              @click="copy(activeBank.number, activeBank.id)"
+            >
+              <i :class="copiedIndex === activeBank.id ? 'fas fa-check' : 'fas fa-copy'"></i>
+              {{ copiedIndex === activeBank.id ? 'Đã sao chép!' : 'Sao chép số tài khoản' }}
+            </button>
+          </div>
+        </div>
+      </transition>
+
     </section>
   `
 }

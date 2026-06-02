@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   color: var(--text);
   background: #c8b49a;
   overflow-x: hidden;
@@ -165,7 +165,7 @@ h4 {
   letter-spacing: 5px;
   opacity: 0.65;
   margin-top: 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-weight: 300;
 }
 
@@ -177,7 +177,7 @@ h4 {
   background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.55);
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.72rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -200,8 +200,15 @@ h4 {
 }
 
 @keyframes coverBtnPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.25); }
-  50%       { box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0);
+  }
 }
 
 /* ==============================
@@ -462,19 +469,18 @@ h4 {
 }
 
 .hero-name-left {
-  animation: heroFromLeft 2s cubic-bezier(0.22, 1, 0.36, 1) 4.5s both;
+  animation: heroFromLeft 4s cubic-bezier(0.16, 1, 0.3, 1) 4.5s both;
 }
 
 .hero-name-right {
-  animation: heroFromRight 2s cubic-bezier(0.22, 1, 0.36, 1) 4.9s both;
+  animation: heroFromRight 4s cubic-bezier(0.16, 1, 0.3, 1) 5.0s both;
 }
 
 @keyframes heroFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-240px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -484,9 +490,8 @@ h4 {
 @keyframes heroFromRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(240px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -499,7 +504,7 @@ h4 {
   font-size: 2rem;
   display: inline;
   text-transform: none;
-  animation: heroFade 1.5s ease 4.7s both;
+  animation: heroFade 3s ease 5.2s both;
 }
 
 @keyframes heroFade {
@@ -515,7 +520,7 @@ h4 {
 @keyframes heroFromBottom {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(80px);
   }
 
   to {
@@ -531,7 +536,7 @@ h4 {
   padding: 7px 22px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   display: inline-block;
-  animation: heroFromBottom 1.8s cubic-bezier(0.22, 1, 0.36, 1) 5.2s both;
+  animation: heroFromBottom 3.5s cubic-bezier(0.16, 1, 0.3, 1) 6.2s both;
 }
 
 .hero-scroll {
@@ -649,7 +654,6 @@ h4 {
 
 .about-photo img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -665,7 +669,7 @@ h4 {
 
 .about-text {
   font-size: 16px;
-  font-family: "Times New Roman", serif;
+  font-family: Baskerville, "Times New Roman", serif;
   color: var(--muted);
   line-height: 1.65;
   text-align: center;
@@ -781,16 +785,23 @@ h4 {
 
 .pi-section {
   background: var(--white);
-  padding: 0px 32px 52px;
+  padding: 0 32px 52px;
   text-align: center;
 }
 
 .pi-monogram {
-  position: relative;
-  display: inline-block;
-  width: 64px;
-  height: 72px;
-  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 28px;
+}
+
+.pi-monogram img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .pi-mono-back,
@@ -848,14 +859,14 @@ h4 {
   line-height: 1.55;
   letter-spacing: 0.5px;
   margin-bottom: 5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
 .pi-parent-addr {
   font-size: 0.75rem;
   color: var(--muted);
   line-height: 1.6;
-  font-family: 'Roboto', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-weight: 300;
 }
 
@@ -888,7 +899,7 @@ h4 {
   text-transform: uppercase;
   color: var(--muted);
   margin-top: 2px;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
 .pi-rings {
@@ -913,7 +924,7 @@ h4 {
 }
 
 .pi-event-venue {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 1rem;
   color: var(--text);
   font-style: italic;
@@ -940,7 +951,7 @@ h4 {
 .pi-event-lunar {
   font-size: 0.8rem;
   color: var(--muted);
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-weight: 300;
 }
 
@@ -972,7 +983,7 @@ h4 {
 }
 
 .invcard-couple-names {
-  font-family: 'Roboto', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -993,7 +1004,7 @@ h4 {
 }
 
 .invcard-heading {
-  font-family: 'roboto', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   letter-spacing: 3px;
   color: var(--text);
   font-weight: 400;
@@ -1045,7 +1056,7 @@ h4 {
 }
 
 .invcard-time-bold {
-  font-family: 'roboto', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--text);
@@ -1071,7 +1082,7 @@ h4 {
 }
 
 .invcard-schedule {
-  font-family: 'roboto', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.9rem;
   color: var(--text);
   margin-bottom: 10px;
@@ -1182,7 +1193,7 @@ h4 {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-weight: 400;
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
 }
@@ -1258,6 +1269,107 @@ h4 {
 }
 
 /* ==============================
+   BRIDE PHOTOS
+============================== */
+.bp-section {
+  background: var(--white);
+  margin-bottom: 20%;
+}
+
+.bp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  height: 520px;
+  margin: 30px;
+}
+
+/* Cột trái */
+.bp-left {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0px;
+}
+
+.bp-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bp-left-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 14px 18px;
+  background: linear-gradient(to top, rgba(26, 20, 16, 0.62) 0%, transparent 100%);
+}
+
+.bp-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.bp-sub {
+  font-family: Baskerville, "Times New Roman", serif;
+  font-size: 0.58rem;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 3px;
+}
+
+/* Cột phải */
+.bp-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bp-right-top,
+.bp-right-bot {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.bp-right-top img,
+.bp-right-bot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bp-right-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 12px 12px;
+  background: linear-gradient(to top, rgba(26, 20, 16, 0.58) 0%, transparent 100%);
+}
+
+.bp-quote-sm {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.bp-script-sm {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 1;
+}
+
+/* ==============================
    GALLERY
 ============================== */
 .gallery-section {
@@ -1319,6 +1431,17 @@ h4 {
 
 .btn-outline:hover {
   background: var(--primary);
+  color: white;
+}
+
+.btn-outline--muted {
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.btn-outline--muted:hover {
+  background: var(--muted);
+  border-color: var(--muted);
   color: white;
 }
 
@@ -1572,6 +1695,39 @@ h4 {
   display: block;
 }
 
+.pq-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0 8px;
+}
+
+.pq-caption-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border));
+}
+
+.pq-caption-line:last-child {
+  background: linear-gradient(to left, transparent, var(--border));
+}
+
+.pq-caption-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: normal;
+  line-height: 1.5;
+}
+
 /* ==============================
    COUNTDOWN
 ============================== */
@@ -1676,7 +1832,7 @@ h4 {
   padding: 11px 14px;
   border: 1px solid var(--border);
   border-radius: 2px;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.88rem;
   color: var(--text);
   background: var(--white);
@@ -1729,7 +1885,7 @@ h4 {
   background: var(--primary);
   color: white;
   border: none;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.65rem;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -1772,130 +1928,248 @@ h4 {
    GIFT — MỪNG CƯỚI
 ============================== */
 .gift-section {
-  padding: 68px 20px 60px;
+  padding: 60px 24px 56px;
   background: var(--dark);
   text-align: center;
 }
 
-.gift-section .section-title .divider i {
+.gift-header {
+  margin-bottom: 40px;
+}
+
+.gift-header-sub {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
   color: var(--accent);
+  margin-bottom: 6px;
 }
 
-.gift-intro {
-  font-size: 0.8rem;
+.gift-header-title {
+  font-family: Baskerville, "Times New Roman", serif;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
-  line-height: 1.85;
-  max-width: 320px;
-  margin: -16px auto 28px;
   font-weight: 300;
+  margin-bottom: 10px;
 }
 
-.gift-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.gift-header-hint {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
+  animation: hintBounce 1.6s ease-in-out infinite;
 }
 
-.gift-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 18px 12px 16px;
+@keyframes hintBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.gift-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.gift-box-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  cursor: pointer;
 }
 
-.gift-card-title {
-  font-size: 0.6rem;
+.gift-box-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(201, 168, 112, 0.2), rgba(201, 168, 112, 0.08));
+  border: 1px solid rgba(201, 168, 112, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  color: var(--accent);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.gift-box-item:active .gift-box-icon {
+  transform: scale(0.93);
+}
+
+.gift-box-item:hover .gift-box-icon {
+  background: linear-gradient(145deg, rgba(201, 168, 112, 0.35), rgba(201, 168, 112, 0.15));
+  box-shadow: 0 6px 28px rgba(201, 168, 112, 0.25);
+}
+
+.gift-box-label {
+  font-family: Baskerville, "Times New Roman", serif;
+  font-size: 0.65rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--accent);
-  font-weight: 700;
-  font-family: 'Lato', sans-serif;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.gift-qr {
-  width: 100%;
-  aspect-ratio: 1;
+.gift-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.9;
+  font-weight: 300;
+  font-family: Baskerville, "Times New Roman", serif;
+}
+
+/* QR Modal */
+.qr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 20, 16, 0.65);
+  z-index: 9995;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px;
 }
 
-.gift-qr img {
+.qr-modal {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 28px 22px 22px;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.gift-qr-placeholder {
-  width: 100%;
-  height: 100%;
-  border: 2px dashed var(--border);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--border);
-  font-size: 2.8rem;
-}
-
-.gift-info {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.gift-info-row {
-  display: flex;
-  flex-direction: column;
+  max-width: 300px;
   text-align: center;
-  line-height: 1.3;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(26, 20, 16, 0.35);
 }
 
-.gi-label {
-  font-size: 0.6rem;
+.qr-modal-close {
+  position: absolute;
+  top: 13px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
   color: var(--muted);
-  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 4px;
 }
 
-.gi-val {
+.qr-modal-label {
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-family: Baskerville, "Times New Roman", serif;
+}
+
+.qr-modal-owner {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.qr-modal-img {
+  margin-bottom: 16px;
+}
+
+.qr-modal-img img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.qr-modal-placeholder {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  background: var(--cream);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--border);
+}
+
+.qr-modal-info {
+  background: var(--light);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.qr-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qr-info-label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: Baskerville, "Times New Roman", serif;
+}
+
+.qr-info-val {
   font-size: 0.72rem;
   color: var(--text);
   font-weight: 600;
-  word-break: break-all;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
-.gi-accent {
-  color: var(--accent);
+.qr-info-accent {
+  color: var(--primary);
+  font-size: 0.8rem;
 }
 
-.gift-copy-btn {
+.qr-copy-btn {
+  width: 100%;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 7px 14px;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
   border: 1px solid var(--border);
   color: var(--primary);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   letter-spacing: 1px;
   cursor: pointer;
   background: none;
   transition: all 0.3s;
-  border-radius: 20px;
-  font-family: 'Lato', sans-serif;
-  width: 100%;
-  justify-content: center;
+  border-radius: 24px;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
-.gift-copy-btn:hover,
-.gift-copy-btn.copied {
+.qr-copy-btn:hover,
+.qr-copy-btn.copied {
   background: var(--primary);
   color: white;
   border-color: var(--primary);
+}
+
+.qr-fade-enter-active,
+.qr-fade-leave-active {
+  transition: opacity 0.22s ease;
+}
+
+.qr-fade-enter-from,
+.qr-fade-leave-to {
+  opacity: 0;
 }
 
 /* ==============================
@@ -1964,7 +2238,7 @@ h4 {
 }
 
 .footer-msg {
-  font-family: "UTM Avo", sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.8;
@@ -2120,7 +2394,7 @@ h4 {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
 .wish-toast-body {
@@ -2133,14 +2407,14 @@ h4 {
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 1px;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
 .wish-toast-msg {
   font-size: 0.62rem;
   color: var(--text);
   line-height: 1.4;
-  font-family: 'Lato', sans-serif;
+  font-family: Baskerville, "Times New Roman", serif;
 }
 
 @keyframes wishFloatUp {

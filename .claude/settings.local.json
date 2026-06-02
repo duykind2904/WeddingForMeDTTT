@@ -8,7 +8,14 @@
       "Bash(ConvertTo-Json)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "WebSearch",
+      "WebFetch(domain:www.cleanpng.com)",
+      "Bash(curl -L -o ornament1.webp \"https://icon2.cleanpng.com/lnd/20240919/zj/40acd1c823f6e364703dfb86ecad7b.webp\" -s)",
+      "Bash(curl -L -o ornament2.webp \"https://icon2.cleanpng.com/ci4/vuy/skq/a5iifwufl.webp\" -s)",
+      "Bash(curl -L -o ornament3.webp \"https://icon2.cleanpng.com/lnd/20250204/vi/4e85bc35b863981d798106b4d2ae9e.webp\" -s)",
+      "Bash(grep -roh 'image/[^\"'\\\\''` ]*' e:/abc/WeddingForMeDTTT/components/ e:/abc/WeddingForMeDTTT/index.html e:/abc/WeddingForMeDTTT/css/)",
+      "Bash(grep -oh \"image/[^\\\\\"'\\\\` ]*\" e:/abc/WeddingForMeDTTT/components/photo-quote.js e:/abc/WeddingForMeDTTT/components/gallery.js e:/abc/WeddingForMeDTTT/components/bride-photos.js)"
     ]
   }
 }

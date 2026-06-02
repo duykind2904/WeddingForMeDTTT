@@ -16,7 +16,7 @@ const EventsComponent = {
         },
         {
           icon: 'fa-solid fa-champagne-glasses',
-          time: '11:00',
+          time: '10:30',
           title: 'Tiệc Cưới',
           map: 'https://maps.app.goo.gl/eeGzAwVXCuT1LA3M6'
         }
