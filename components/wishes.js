@@ -20,7 +20,7 @@ const WishesComponent = {
     }
   },
   mounted() {
-    setTimeout(() => this.spawnLoop(), 2500)
+    setTimeout(() => this.spawnLoop(), 12500)
   },
   beforeUnmount() {
     clearTimeout(this.spawnTimer)

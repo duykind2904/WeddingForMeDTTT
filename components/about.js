@@ -2,7 +2,7 @@ const AboutComponent = {
   template: `
     <section id="about" class="about-section fade-up">
       <div class="about-photo">
-        <img src="image/HIO9922.jpg" alt="Duy Trúc & Thu Trinh">
+        <img src="image/HIO9622.webp" alt="Duy Trúc & Thu Trinh">
       </div>
       <div class="divider"><i class="fas fa-heart"></i></div>
       <h2 class="about-heading">Chúng Mình</h2>
@@ -30,12 +30,12 @@ const AboutComponent = {
         span.style.animationDelay = ms + 'ms'
         container.appendChild(span)
         spans.push(span)
-        ms += ch === ' ' ? 15 : 35
+        ms += ch === ' ' ? 7 : 18
       })
       if (pi < paragraphs.length - 1) {
         container.appendChild(document.createElement('br'))
         container.appendChild(document.createElement('br'))
-        ms += 60
+        ms += 30
       }
     })
 

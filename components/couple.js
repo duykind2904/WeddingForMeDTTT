@@ -25,7 +25,7 @@ const CoupleComponent = {
         <div class="couple-person bride">
           <div class="cp-card-wrap cp-card-wrap--reverse">
             <div class="cp-card">
-              <img src="image/z31.jpg" alt="Thu Trinh">
+              <img src="image/z33.jpg" alt="Thu Trinh">
               <span class="cp-role">Cô dâu</span>
             </div>
           </div>

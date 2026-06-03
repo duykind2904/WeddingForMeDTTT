@@ -15,7 +15,7 @@ const PhotoQuoteComponent = {
 
       <!-- Lưới ảnh 2×2 -->
       <div class="pq-grid">
-        <div class="pq-photo"><img src="image/z28.jpg" alt=""></div>
+        <div class="pq-photo"><img src="image/z34.jpg" alt=""></div>
         <div class="pq-photo"><img src="image/z10.jpg" alt=""></div>
       </div>
 

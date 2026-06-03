@@ -109,6 +109,7 @@ h4 {
   opacity: 0;
 }
 
+
 /* Con dấu nằm trong cánh trái, tại mép phải */
 .cover-seal {
   position: absolute;
@@ -481,6 +482,7 @@ h4 {
     opacity: 0;
     transform: translateX(-240px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -492,6 +494,7 @@ h4 {
     opacity: 0;
     transform: translateX(240px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -784,9 +787,20 @@ h4 {
 }
 
 .pi-section {
-  background: var(--white);
+  background: linear-gradient(160deg, #f9f3ea 0%, #ffffff 45%, #f3ede3 100%);
   padding: 0 32px 52px;
   text-align: center;
+  position: relative;
+}
+
+.pi-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(201,168,112,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 80%, rgba(123,92,61,0.06) 0%, transparent 55%);
+  pointer-events: none;
 }
 
 .pi-monogram {
@@ -827,14 +841,21 @@ h4 {
 
 .pi-parents {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0;
   margin-bottom: 28px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,239,227,0.6));
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 16px rgba(201,168,112,0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+  overflow: hidden;
 }
 
 .pi-parent {
   flex: 1;
-  padding: 0 8px;
+  padding: 20px 12px;
+  position: relative;
 }
 
 .pi-divider-v {
