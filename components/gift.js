@@ -18,8 +18,8 @@ const GiftComponent = {
           label: 'Cô Dâu',
           owner: 'Nguyễn Thị Thu Trinh',
           bank: 'ViettinBank',
-          number: '9876543210',
-          qr: 'image/qr.webp'
+          number: '100875766753',
+          qr: 'image/qr2.jpg'
         }
       ]
     }
